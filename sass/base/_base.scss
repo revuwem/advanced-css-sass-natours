@@ -1,0 +1,23 @@
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    /*
+      this property defines what 1rem is should be:
+      >>>  rem unit measure / user agent default font-size = 10px / 16px = 0.625,
+      this make possible to easily calculate the rems from the pixels, 
+      e.g. body padding absolute value (30px) / 1rem (10px) = 3rem 
+    */
+    font-size: 62.5%; 
+}
+
+body{   
+    padding: 3rem;
+}
