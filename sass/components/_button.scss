@@ -1,4 +1,6 @@
 .btn{
+
+    &,
     &:link,
     &:visited{
         font-size: $default-font-size;
@@ -8,7 +10,10 @@
         display: inline-block;
         border-radius: 5rem;
         transition: all .2s;
-        position: relative;    
+        position: relative;  
+
+        // Properties for the <button>
+        border: none;        
     }
 
     &::after{
@@ -51,12 +56,13 @@
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
-        &::after{
+        &::after{           
             transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
+            opacity: 0; 
         }
     }
 
+    &:focus,
     &:active{
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
