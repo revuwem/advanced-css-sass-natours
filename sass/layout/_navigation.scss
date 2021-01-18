@@ -16,6 +16,16 @@
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
+
+        @include respond('tab-portrait') {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond('phone') {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__icon {
@@ -58,7 +68,15 @@
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
 
-        // transform: scale(70);
+        @include respond('tab-portrait') {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond('phone') {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__nav{
