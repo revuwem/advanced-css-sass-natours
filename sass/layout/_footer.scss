@@ -9,7 +9,11 @@
 
     &__logo-box {
         text-align: center;
-        margin: 8rem;
+        margin-bottom: 8rem;
+
+        @include respond('tab-portrait') {
+            margin-bottom: 6rem;
+        }
     }
 
     &__logo {

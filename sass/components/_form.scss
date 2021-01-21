@@ -17,6 +17,10 @@
         width: 90%;
         transition: all .1s;
 
+        @include respond('tab-portrait') {
+            width: 100%;
+        }
+
         &:focus {
             outline: none;
             border-bottom: 3px solid $color-primary;
@@ -50,6 +54,15 @@
     &__radio-group {
         width: 49%;
         display: inline-block;
+
+        @include respond('tab-landscape') {
+            width: 30%;
+        }
+
+        @include respond('tab-portrait') {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
     }    
 
     &__radio-label {

@@ -69,13 +69,13 @@
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
 
         @include respond('tab-portrait') {
-            top: 4rem;
-            right: 4rem;
+            top: 4.5rem;
+            right: 4.5rem;
         }
 
         @include respond('phone') {
-            top: 3rem;
-            right: 3rem;
+            top: 3.5rem;
+            right: 3.5rem;
         }
     }
 

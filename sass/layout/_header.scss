@@ -1,6 +1,6 @@
 
 .header{
-    height: 95vh;
+    height: 75vh;
     position: relative;
     background-image: linear-gradient(
         to right bottom,
@@ -10,10 +10,14 @@
     background-size: cover;
     background-position: top;
 
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+
+    @include respond('tab-portrait') {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 68vh, 0 100%);
+    }
 
     @include respond('phone') {
-        clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
     }
     
     &__logo-box{

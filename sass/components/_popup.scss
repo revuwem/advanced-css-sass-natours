@@ -98,4 +98,86 @@
         }
     }
 
+
+
+
+
+
+
+
+
+    @include respond('tab-landscape') {               
+        &__content{
+            width: 85%;            
+        }
+
+        &__left {
+            width: 40%;
+            display: table-cell;
+            vertical-align: middle;        
+        }
+
+        &__right {
+            width: 60%;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3rem 5rem;
+        }        
+
+
+        &__text {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+
+           
+        -webkit-column-gap: 3rem;
+        -moz-column-gap: 3rem;
+                column-gap: 3rem; // default gap is 1em that actually will equal 14px (font-size of this element) 
+        }
+    }
+
+    @include respond('tab-portrait') { 
+        &__content{
+            display: block;
+        }
+        
+        &__left {
+            width: 100%;
+            height: 50%;
+            display: flex;               
+        }
+
+        &__right {
+            width: 100%;
+            height: 50%;
+            display: block;
+            padding: 2rem 4rem;
+        }
+
+        &__img {
+            display: block;
+            float: left;
+            width: 50%;
+        }
+    }
+
+    @include respond('phone') {        
+        
+        &__right {
+            width: 100%;
+            height: 30%;
+            display: block;
+            padding: 2rem 4rem;
+        }
+
+        &__text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+
+           
+        -webkit-column-gap: 2rem;
+        -moz-column-gap: 2rem;
+                column-gap: 2rem; // default gap is 1em that actually will equal 14px (font-size of this element) 
+        }
+    }
 }
