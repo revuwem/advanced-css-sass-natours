@@ -193,8 +193,9 @@
 
 
 
-    @include respond('tab-portrait') {
-        
+    // @include respond('tab-portrait') {
+    @media only screen and  (max-width: 56.25em),
+            only screen and (hover: none) {        
         height: auto;
         perspective: none;
         border-radius: 4px;

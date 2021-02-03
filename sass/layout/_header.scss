@@ -1,16 +1,35 @@
 
 .header{
-    height: 75vh;
+    height: 55vh;
     position: relative;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 0.8),
         rgba($color-primary-dark, 0.8)),
-        url(../img/hero.jpg);
+        url(../img/hero-small.jpg);
     background-size: cover;
     background-position: top;
 
-    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        height: 75vh;
+        clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+    }
+
+    // this styles will apply on high resolution screens or very wide viewports
+    // 192 dpi is the standard for high resolution screens based on the resolution of Apple retina screen    
+    // -webkit-min-device-pixel-ratio is a property for check pixel ratio of the device in Safari
+    // 37.5em = 600px / 16px
+    // 125em = 2000px / 16px
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+           only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+           only screen and (min-width: 125em){
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+            url(../img/hero.jpg);
+    }
 
     @include respond('tab-portrait') {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 68vh, 0 100%);
